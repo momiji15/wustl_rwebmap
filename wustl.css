@@ -1,0 +1,358 @@
+/* WashU colors 
+Red: #A61518
+Gray: #6B7473
+*/
+  
+/*
+WUSTL CSS for xaringan slides 
+Building off the Rutgers one created by Joseph V. Casillas
+*/
+
+/* Package defaults that we slightly tweak */
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+/*changed the text to the WashU grey */
+a {
+  color: #6B7473; 
+  text-decoration: none;
+}
+
+code {
+    color: #A61518
+}
+
+/* slightly lower and bigger than default */
+.footnote {
+  position: absolute;
+  bottom: 1em;
+  padding-right: 4em;
+  font-size: 95%;
+}
+
+/* important code slightly red */
+.remark-code-line-highlighted {
+  background-color: #FFD3DE !important;
+}
+
+/* color tweak */
+.inverse {
+  background-color: #6B7473;
+  color: #777872;
+  text-shadow: 0 0 20px #333;
+}
+
+/* slightly spacing change */
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #f3f3f3;
+  line-height: 1.0em;
+}
+
+/* Two-column layout (slightly wider for aspect ration) */
+.left-column {
+  color: #777;
+  width: 25%;
+  height: 92%;
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+/* slightly thiner to suppor aspect ration */
+.right-column {
+  width: 70%;
+  float: right;
+  padding-top: 1em;
+}
+
+.pull-left {
+  float: left;
+  width: 45%;
+}
+
+.pull-right {
+  float: right;
+  width: 45%;
+}
+
+.pull-right ~ * {
+  clear: both;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+
+/* adjust table horizontal spacing */
+th, td {
+    padding:0 15px 0 15px;
+}
+
+/* remove color from tables */
+table {
+  margin: auto;
+  border-top: none;
+  border-bottom: none;
+}
+
+table thead th { border-bottom: none; }
+thead, tfoot, tr:nth-child(even) { background: none; }
+
+/* leave this alone */
+@page { margin: 0; }
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/*------------------*/
+/* SCROLLING OPTIONS*/
+/*------------------*/
+/*I got this from the Sydney template*/
+.scroll-box-8 {
+  height:8em;
+  overflow-y: scroll;
+}
+.scroll-box-10 {
+  height:10em;
+  overflow-y: scroll;
+}
+.scroll-box-12 {
+  height:12em;
+  overflow-y: scroll;
+}
+.scroll-box-14 {
+  height:14em;
+  overflow-y: scroll;
+}
+.scroll-box-16 {
+  height:16em;
+  overflow-y: scroll;
+}
+.scroll-box-18 {
+  height:18em;
+  overflow-y: scroll;
+}
+.scroll-box-20 {
+  height:20em;
+  overflow-y: scroll;
+}
+.scroll-output {
+  height: 90%;
+  overflow-y: scroll;
+}
+
+
+
+
+/*~~~~~~~~~~~~~~*/
+/* WUSTL additions */
+/*~~~~~~~~~~~~~~*/
+/*I built upon the RU additions :) */
+
+/* Title slide */
+
+/* Add image and change bg color */
+.title-slide {
+  background-image: url(./Pictures/WUSTLib_White_Big.png);
+  background-position: left top;
+  background-size: contain;
+  background-color: #A61518;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* H1 fonts */
+.title-slide h1 {
+  color: #FFFFFF;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 250px;
+  font-weight: normal;
+  font-size: 45px;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+/* H2 fonts */
+.title-slide h2 {
+  color: #FFFFFF;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 35px;
+  text-align: left;
+  text-shadow: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* H3 fonts */
+.title-slide h3 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #FFFFFF;
+  font-family: 'Libre Baskerville', serif;
+  text-align: left;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
+}
+
+/* Remove slide count */
+.title-slide .remark-slide-number {
+  text-shadow: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~*/
+/*    BODY TEXT     */
+/*~~~~~~~~~~~~~~~~~~*/
+/*This is an addition to the WUSTL css file. To conform to the WUSTL fonts used. */
+body { font-family: 'Libre Baskerville', serif;}
+
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* SECTION DIVIDERS */
+/*~~~~~~~~~~~~~~~~~~*/
+
+/* section divider red */
+.title-slide-section-red {
+  background-color: #cc0033;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider red H1 fonts */
+.title-slide-section-red h1, .title-slide-section-red h2, .title-slide-section-red h3, .title-slide-section-red p {
+  color: #fff;
+}
+
+/* section divider grey */
+.title-slide-section-grey {
+  background-color: #515151;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider grey H1 fonts */
+.title-slide-section-grey h1, .title-slide-section-grey h2, .title-slide-section-grey h3 {
+  color: #fff;
+}
+
+.title-slide-section-grey p {
+  color: #fff;
+}
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* FINAL SLIDE      */
+/*~~~~~~~~~~~~~~~~~~*/
+
+.title-slide-final {
+  background-color: #272822;
+  color: #fff;
+  padding-left: 100px;
+  text-shadow: 0 0 20px #333;
+  text-align: center;
+}
+
+.title-slide-final h1 {
+  color: #cc0033;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Global adjustments */
+/*~~~~~~~~~~~~~~~~~~~~*/
+
+/* Add padding to all slides for 16:9 aspect ratio */
+.remark-slide-content {
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/*Text fonts: This is an addition to the WUSTL css file. To conform to the WUSTL fonts used. */
+body { font-family: 'Libre Baskerville', serif;}
+
+/* Color adjustments for text */
+
+
+/* Add blue tag */
+.blue {
+  color: #0000CC;
+  font-weight: bold;
+}
+
+/* Add grey tag */
+.grey {
+  color: #515151;
+}
+
+.lightgrey {
+  color: #818181;
+}
+
+/* Force black */
+.black {
+  color: black;
+  font-weight: bold;
+}
+
+/* Add white tag */
+.white {
+  color: white;
+}
+
+/*adjustments to headers */
+h1 {
+  color: black;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+  font-size: 40px !important
+}
+
+h2 {
+    color: black;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: normal;
+    font-size: 30px !important
+
+}
+
+h3 {
+  color: black;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+}
+
+h4 {
+  color: black;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+}
+
+/* Font size tags */
+.big {
+  font-size: 1.5em;
+}
+
+/* ru blockquote */
+ru-blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-left: solid 10px #cc0033;
+  background-color: #818181;
+  padding: 1em;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
