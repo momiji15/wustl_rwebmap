@@ -13,19 +13,20 @@ output:
 
 
 
-#  Learning Objectives
-##  - To map points with the Leaflet for R package.
+#  Learning objectives
+##  - To map points with the leaflet for R package.
 ##  - To download a polygon using the tidycensus package.
-##  - To map polygons with the Leaflet for R package.
+##  - To map polygons with the leaflet for R package.
 ##  - To have basic familiarity with R Markdown.
 ##  - To embed your map in R Markdown and share it using RPubs.
 ---
 class: inverse, center, middle
 
-# Getting Started
+# Getting started
+
 
 ---
-# Open up R-Studio
+# Open up RStudio
 --
 
 ## For an RScript: `File -> New File -> RScript`
@@ -41,8 +42,15 @@ class: inverse, center, middle
 
 
 ---
+# RStudio interface
+.center[![](Pictures/rstudio_ps.png)]
 
-# Installing Packages
+
+
+
+---
+
+# Installing packages
 
 Install and load these packages before we start!
 
@@ -98,7 +106,7 @@ library(magrittr)
 ---
 
 .scroll-output[
-# Mapping points with the Leaflet for R Package
+# Mapping points with the leaflet for R package
 
 ```{r, include = FALSE}
 library(rgdal)
@@ -129,12 +137,12 @@ leaflet() %>%
 
 ---
 
-# Another Important thing to note!
+# Another important thing to note!
 
 ## Make sure to set `verbose = FALSE` to suppress any warning messages. This doesn't fix everything though, for we will have to change another option later on.
 
 ---
-# Downloding a Polygon with the tidycensus package
+# Downloading a polygon with the tidycensus package
 ```{r eval = FALSE}
 census_api_key("ENTER API KEY HERE")
 census_variables <- load_variables(2017, "acs5", cache = TRUE)
@@ -145,27 +153,25 @@ census_variables <- load_variables(2017, "acs5", cache = TRUE)
 
 
 ---
-# Downloading a Polygon with the tidycensus package
+# Downloading a polygon with the tidycensus package
+
 ## Here are the variables we are interested in...
 
 ```{r, eval = TRUE, echo = FALSE}
 library(DT)
 
-df <- data.frame("name" = c("B18101_00", "B18101_016", "B18101_019", "B18101_035", "B18101_038"),
-                              "label" = c("Total Population", "Estimate- Total Male 65 to 74 years old with a
-                              disability", "Estimate - Totale Male 75 years and older with a disability",
-                              "Estimate - Total Female 65 to 74 years with a disability", "Estimate - Total
-                              Female 75 years and over with a disability"),
-                              "concept" = c("Sex and Age by Disability Status", "Sex and Age by Disability  
-                              Status", "Sex and Age by Disability Status", "Sex and Age by Disability Status",
-                              "Sex and Age by Disability Status"))
+df <- data.frame("name" = c("B18101_001", "B18101_016", "B18101_019", "B18101_035", "B18101_038"),
+                              "label" = c("Total Population", "Estimate - Total Male 65 to 74 years old with                               a disability", "Estimate - Total Male 75 years and older with a disability",
+                              "Estimate - Total Female 65 to 74 years old with a disability", "Estimate -                                   Total Female 75 years and over with a disability"), "concept" = c("Sex and Age                                by Disability Status", "Sex and Age by Disability  
+                              Status", "Sex and Age by Disability Status", "Sex and Age by Disability      
+                              Status","Sex and Age by Disability Status"))
 
 datatable(df, options = list(dom = 't')) 
 
 ```
 ---
 
-# Downloading a Polygon with the tidycensus package
+# Downloading a polygon with the tidycensus package
 ```{r, include = FALSE}
 library(tidycensus)
 census_api_key("e758b8cf88c937a42cd051ff1ecfb2bb0d1fec41")
@@ -183,7 +189,7 @@ stlouis_disabled <- get_acs(geography = "tract",
 ```
 
 ---
-# Downloading a Polygon with the tidycensus package
+# Downloading a polygon with the tidycensus package
 ## Creating a new variable with the mutate function
 ```{r, eval = FALSE}
 stlouis_disabled <- get_acs(geography = "tract", 
@@ -197,7 +203,7 @@ stlouis_disabled <- get_acs(geography = "tract",
 operation which is to sum up all of the total populations by sex.
 ---
 .scroll-output[
-# Mapping points with the Leaflet for R Package
+# Mapping points with the leaflet for R package
 
 class: center
 
@@ -336,11 +342,17 @@ map
 ### **This is bold** `**This is bold**`
 
 ---
-# Inserting R Code Chunks
+# Inserting R code chunks
+![](Pictures/pt2u2.png)
+
+---
+
+# Inserting R code chunks
 
 ## **Insert -> R **
 
 ## For today's workshop, we will create two code chunks.
+
 
 --
 ### Pre-processing code chunk
